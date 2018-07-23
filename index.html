@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Step 1 -->
+    <form class="step1 container is-active" onsubmit="toggle('.step1','.step2');">
+
+
+        <h3>Registration form</h3>
+
+        <input type="email" placeholder="Enter Email" name="email" required>
+
+        <input type="text" placeholder="First name" name="firstName" required>
+
+        <input type="text" placeholder="User name" name="userName" pattern="[a-zA-Z]{4,12}" title="Username should be between 4 and 12 characters long. It should contain letters only."
+            required>
+
+        <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*[a-z])(?=.*[A-Z])((?=.*[!@#$%^&*()_+-=])|(?=.*\d)).{6,12}"
+            title="Your password should be alphanumeric between 6 and 12 charachters long. It should have at least one small and one big letter. It 
+should contain at least one number or a special character: !@#$%^&*()_+-=" required>
+
+        <p>
+            <input type="checkbox" id="terms" required>
+            <label for="terms">By checking this box, I agree to Terms & Conditions of the site.</label>
+        </p>
+        <button type="submit" class="button">Register</button>
+
+    </form>
+
+    <!-- Step 2 -->
+    <div class="step2 container">
+
+        <h3>You’re ready to play! In order to play with real money, you will need to provide more information. You can do so
+            now if you wish, or skip and do it at a later time.</h3>
+
+        <button type="button" class="button" onclick="toggle('.step2', '.step3');">Continue Registration</button>
+        <a href="http://www.casino.com/">
+            <button type="button" class="button cta">Skip</button>
+        </a>
+    </div>
+
+    <!-- Step 3 -->
+    <form class="step3 container" onsubmit="toggle('.step3','.step4');">
+
+        <input type="text" placeholder="Address 1" name="address1" pattern="([(]?[a-zA-Z0-9][-,.)]*\s?)+([a-zA-Z0-9][-,+\s#.)]*)" required>
+
+        <input type="text" placeholder="Address 2" name="address2" pattern="([(]?[a-zA-Z0-9][-,.)]*\s?)+([a-zA-Z0-9][-,+\s#.)]*)">
+
+        <input type="text" placeholder="City" name="city" pattern="([(]?[a-zA-Z][-,.)]*\s?)+([a-zA-Z][-,.)]*)" required>
+
+        <input type="text" placeholder="Country" name="country" pattern="([(]?[a-zA-Z][-,.)]*\s?)+([a-zA-Z][-,.)]*)" required>
+
+        <input type="text" placeholder="Postal Code" name="postalCode" pattern="^[a-zA-Z0-9_-]*$" required>
+
+        <input type="text" placeholder="Phone Number" name="phoneNumber" pattern="\+?\(?\d{2,4}\)?[\d\s-]{3,}" required>
+
+        
+            <p>Do you have a bonus code? Click here:<input type="checkbox" id="bonusCheck" ></p>
+        
+        <input type="text" placeholder="Bonus Code" name="bonusCode" id="bonusCode">
+
+        <button type="submit" class="button">Register</button>
+
+    </form>
+
+    <!-- Step 4 -->
+    <div class="step4 container">
+
+        <h3>Thank you You can now play with real money. Have fun, and good luck!</h3>
+
+        <a href="http://www.casino.com/casino-games/">
+            <button type="button" class="button cta">Play Now</button>
+        </a>
+        <a href="http://www.casino.com/promotions/">
+            <button type="button" class="button cta">Promotions</button>
+        </a>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./master.js"></script>
+</body>
+
+</html>
