@@ -17,12 +17,12 @@
 
         <input type="text" placeholder="First name" name="firstName" required>
 
-        <input type="text" placeholder="User name" name="userName" pattern="[a-zA-Z]{4,12}" title="Username should be between 4 and 12 characters long. It should contain letters only."
+        <input type="text" placeholder="User name" name="userName" pattern="[a-zA-Z]{4,12}" title="Your username should be between 4 and 12 characters long. It should contain letters only"
             required>
 
         <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*[a-z])(?=.*[A-Z])((?=.*[!@#$%^&*()_+-=])|(?=.*\d)).{6,12}"
-            title="Your password should be alphanumeric between 6 and 12 charachters long. It should have at least one small and one big letter. It 
-should contain at least one number or a special character: !@#$%^&*()_+-=" required>
+            title="Your password should be between 6 and 12 characters long.
+             It should have at least one small letter, one big letter, and at least one number or a special character: !@#$%^&*()_+-=" required>
 
         <p>
             <input type="checkbox" id="terms" required>
@@ -35,7 +35,7 @@ should contain at least one number or a special character: !@#$%^&*()_+-=" requi
     <!-- Step 2 -->
     <div class="step2 container">
 
-        <h3>You’re ready to play! In order to play with real money, you will need to provide more information. You can do so
+        <h3>You're ready to play! In order to play with real money, you will need to provide more information. You can do so
             now if you wish, or skip and do it at a later time.</h3>
 
         <button type="button" class="button" onclick="toggle('.step2', '.step3');">Continue Registration</button>
@@ -47,17 +47,17 @@ should contain at least one number or a special character: !@#$%^&*()_+-=" requi
     <!-- Step 3 -->
     <form class="step3 container" onsubmit="toggle('.step3','.step4');">
 
-        <input type="text" placeholder="Address 1" name="address1" pattern="([(]?[a-zA-Z0-9][-,.)]*\s?)+([a-zA-Z0-9][-,+\s#.)]*)" required>
+        <input type="text" placeholder="Address 1" name="address1" pattern="([(]?[a-zA-Z0-9][-,.)]*\s?)+([a-zA-Z0-9][-,+\s#.)]*)" title="You should provide a valid address" required>
 
-        <input type="text" placeholder="Address 2" name="address2" pattern="([(]?[a-zA-Z0-9][-,.)]*\s?)+([a-zA-Z0-9][-,+\s#.)]*)">
+        <input type="text" placeholder="Address 2" name="address2" pattern="([(]?[a-zA-Z0-9][-,.)]*\s?)+([a-zA-Z0-9][-,+\s#.)]*)" title="You should provide a valid address" >
 
         <input type="text" placeholder="City" name="city" pattern="([(]?[a-zA-Z][-,.)]*\s?)+([a-zA-Z][-,.)]*)" required>
 
-        <input type="text" placeholder="Country" name="country" pattern="([(]?[a-zA-Z][-,.)]*\s?)+([a-zA-Z][-,.)]*)" required>
+        <input type="text" placeholder="Country" name="country" pattern="([(]?[a-zA-Z][-,.)]*\s?)+([a-zA-Z][-,.)]*)" title="You should provide a valid country name" required>
 
-        <input type="text" placeholder="Postal Code" name="postalCode" pattern="^[a-zA-Z0-9_-]*$" required>
+        <input type="text" placeholder="Postal Code" name="postalCode" pattern="^[a-zA-Z0-9_-]*$" title="You should provide a valid postal code" required>
 
-        <input type="text" placeholder="Phone Number" name="phoneNumber" pattern="\+?\(?\d{2,4}\)?[\d\s-]{3,}" required>
+        <input type="text" placeholder="Phone Number" name="phoneNumber" pattern="\+?\(?\d{2,4}\)?[\d\s-]{3,}" title="You should provide a valid phone number" required>
 
         
             <p>Do you have a bonus code? Click here:<input type="checkbox" id="bonusCheck" ></p>
@@ -71,7 +71,7 @@ should contain at least one number or a special character: !@#$%^&*()_+-=" requi
     <!-- Step 4 -->
     <div class="step4 container">
 
-        <h3>Thank you You can now play with real money. Have fun, and good luck!</h3>
+        <h3>Thank you! You can now play with real money. Have fun and good luck!</h3>
 
         <a href="http://www.casino.com/casino-games/">
             <button type="button" class="button cta">Play Now</button>
